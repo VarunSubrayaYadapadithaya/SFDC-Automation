@@ -1,0 +1,4476 @@
+1
+00:00:00,537 --> 00:00:00,555
+1. openBrowser("")
+
+2
+00:00:00,561 --> 00:00:00,562
+5. maximizeWindow()
+
+3
+00:00:00,564 --> 00:00:00,565
+9. navigateToUrl("developer.salesforce.com")
+
+4
+00:00:00,575 --> 00:00:00,576
+13. PageTitle = getWindowTitle()
+
+5
+00:00:00,578 --> 00:00:00,579
+17. verifyMatch(PageTitle, "Salesforce Developers | API Documentation, Developer Forums & More", false)
+
+6
+00:00:00,582 --> 00:00:00,587
+21. if (verifyElementPresent(findTestObject("Page_Salesforce Developers  API Doc/GDPR_Div_CloseButton"), 60, OPTIONAL))
+
+7
+00:00:00,669 --> 00:00:00,671
+1. click(findTestObject("Page_Salesforce Developers  API Doc/GDPR_Div_CloseButton"))
+
+8
+00:00:00,818 --> 00:00:00,822
+25. waitForElementVisible(findTestObject("Page_Salesforce Developers  API Doc/Search_TextBox"), 60)
+
+9
+00:00:00,934 --> 00:00:00,955
+29. setText(findTestObject("Page_Salesforce Developers  API Doc/Search_TextBox"), "Writing Tests")
+
+10
+00:00:01,384 --> 00:00:01,388
+33. sendKeys(findTestObject("Page_Salesforce Developers  API Doc/Search_TextBox"), Keys.chord(ENTER))
+
+11
+00:00:04,778 --> 00:00:04,779
+37. waitForPageLoad(30, STOP_ON_FAILURE)
+
+12
+00:00:04,900 --> 00:00:04,901
+41. verifyElementPresent(findTestObject("Page_Search/a_Writing Tests  Apex Develope"), 30)
+
+13
+00:00:04,959 --> 00:00:04,961
+45. waitForElementClickable(findTestObject("Page_Search/a_Writing Tests  Apex Develope"), 20)
+
+14
+00:00:05,067 --> 00:00:05,069
+49. click(findTestObject("Page_Search/a_Writing Tests  Apex Develope"), STOP_ON_FAILURE)
+
+15
+00:00:05,255 --> 00:00:05,257
+53. driver = getWebDriver()
+
+16
+00:00:05,266 --> 00:00:05,268
+57. delay(5)
+
+17
+00:00:10,271 --> 00:00:10,272
+61. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+18
+00:00:10,329 --> 00:00:10,331
+65. index = 1
+
+19
+00:00:10,331 --> 00:00:10,333
+69. while (contentSize != index)
+
+20
+00:00:10,333 --> 00:00:10,334
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+21
+00:00:10,392 --> 00:00:10,394
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+22
+00:00:10,456 --> 00:00:10,458
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+23
+00:00:10,572 --> 00:00:10,574
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+24
+00:00:10,784 --> 00:00:10,786
+17. delay(1, CONTINUE_ON_FAILURE)
+
+25
+00:00:11,793 --> 00:00:11,794
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+26
+00:00:11,869 --> 00:00:11,870
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+27
+00:00:11,901 --> 00:00:11,903
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+28
+00:00:11,958 --> 00:00:11,960
+33. if (index == 100)
+
+29
+00:00:11,961 --> 00:00:11,962
+37. (index++)
+
+30
+00:00:11,964 --> 00:00:11,966
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+31
+00:00:12,003 --> 00:00:12,005
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+32
+00:00:12,033 --> 00:00:12,035
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+33
+00:00:12,097 --> 00:00:12,098
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+34
+00:00:12,151 --> 00:00:12,152
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+35
+00:00:12,377 --> 00:00:12,377
+17. delay(1, CONTINUE_ON_FAILURE)
+
+36
+00:00:13,383 --> 00:00:13,384
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+37
+00:00:13,435 --> 00:00:13,436
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+38
+00:00:13,477 --> 00:00:13,478
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+39
+00:00:13,529 --> 00:00:13,530
+33. if (index == 100)
+
+40
+00:00:13,530 --> 00:00:13,531
+37. (index++)
+
+41
+00:00:13,532 --> 00:00:13,532
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+42
+00:00:13,551 --> 00:00:13,552
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+43
+00:00:13,598 --> 00:00:13,599
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+44
+00:00:13,689 --> 00:00:13,691
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+45
+00:00:13,747 --> 00:00:13,748
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+46
+00:00:13,939 --> 00:00:13,942
+17. delay(1, CONTINUE_ON_FAILURE)
+
+47
+00:00:14,947 --> 00:00:14,951
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+48
+00:00:15,014 --> 00:00:15,015
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+49
+00:00:15,050 --> 00:00:15,058
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+50
+00:00:15,102 --> 00:00:15,103
+33. if (index == 100)
+
+51
+00:00:15,103 --> 00:00:15,104
+37. (index++)
+
+52
+00:00:15,104 --> 00:00:15,105
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+53
+00:00:15,139 --> 00:00:15,140
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+54
+00:00:15,181 --> 00:00:15,181
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+55
+00:00:15,217 --> 00:00:15,219
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+56
+00:00:15,267 --> 00:00:15,268
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+57
+00:00:15,480 --> 00:00:15,481
+17. delay(1, CONTINUE_ON_FAILURE)
+
+58
+00:00:16,487 --> 00:00:16,488
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+59
+00:00:16,536 --> 00:00:16,537
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+60
+00:00:16,565 --> 00:00:16,566
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+61
+00:00:16,623 --> 00:00:16,626
+33. if (index == 100)
+
+62
+00:00:16,626 --> 00:00:16,628
+37. (index++)
+
+63
+00:00:16,629 --> 00:00:16,630
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+64
+00:00:16,650 --> 00:00:16,651
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+65
+00:00:16,689 --> 00:00:16,690
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+66
+00:00:16,717 --> 00:00:16,718
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+67
+00:00:16,771 --> 00:00:16,772
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+68
+00:00:16,964 --> 00:00:16,966
+17. delay(1, CONTINUE_ON_FAILURE)
+
+69
+00:00:17,971 --> 00:00:17,972
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+70
+00:00:18,019 --> 00:00:18,020
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+71
+00:00:18,070 --> 00:00:18,071
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+72
+00:00:18,107 --> 00:00:18,108
+33. if (index == 100)
+
+73
+00:00:18,109 --> 00:00:18,110
+37. (index++)
+
+74
+00:00:18,110 --> 00:00:18,111
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+75
+00:00:18,129 --> 00:00:18,130
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+76
+00:00:18,160 --> 00:00:18,162
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+77
+00:00:18,210 --> 00:00:18,211
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+78
+00:00:18,267 --> 00:00:18,269
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+79
+00:00:18,518 --> 00:00:18,521
+17. delay(1, CONTINUE_ON_FAILURE)
+
+80
+00:00:19,532 --> 00:00:19,533
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+81
+00:00:19,578 --> 00:00:19,579
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+82
+00:00:19,613 --> 00:00:19,614
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+83
+00:00:19,651 --> 00:00:19,652
+33. if (index == 100)
+
+84
+00:00:19,652 --> 00:00:19,653
+37. (index++)
+
+85
+00:00:19,653 --> 00:00:19,654
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+86
+00:00:19,670 --> 00:00:19,670
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+87
+00:00:19,697 --> 00:00:19,698
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+88
+00:00:19,735 --> 00:00:19,737
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+89
+00:00:19,818 --> 00:00:19,818
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+90
+00:00:20,003 --> 00:00:20,004
+17. delay(1, CONTINUE_ON_FAILURE)
+
+91
+00:00:21,009 --> 00:00:21,010
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+92
+00:00:21,060 --> 00:00:21,061
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+93
+00:00:21,090 --> 00:00:21,091
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+94
+00:00:21,129 --> 00:00:21,129
+33. if (index == 100)
+
+95
+00:00:21,130 --> 00:00:21,131
+37. (index++)
+
+96
+00:00:21,131 --> 00:00:21,132
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+97
+00:00:21,148 --> 00:00:21,148
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+98
+00:00:21,173 --> 00:00:21,175
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+99
+00:00:21,228 --> 00:00:21,229
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+100
+00:00:21,285 --> 00:00:21,286
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+101
+00:00:21,505 --> 00:00:21,505
+17. delay(1, CONTINUE_ON_FAILURE)
+
+102
+00:00:22,511 --> 00:00:22,512
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+103
+00:00:22,553 --> 00:00:22,553
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+104
+00:00:22,593 --> 00:00:22,593
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+105
+00:00:22,627 --> 00:00:22,628
+33. if (index == 100)
+
+106
+00:00:22,629 --> 00:00:22,629
+37. (index++)
+
+107
+00:00:22,630 --> 00:00:22,631
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+108
+00:00:22,645 --> 00:00:22,646
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+109
+00:00:22,673 --> 00:00:22,674
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+110
+00:00:22,704 --> 00:00:22,705
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+111
+00:00:22,764 --> 00:00:22,766
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+112
+00:00:22,933 --> 00:00:22,933
+17. delay(1, CONTINUE_ON_FAILURE)
+
+113
+00:00:23,938 --> 00:00:23,939
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+114
+00:00:23,981 --> 00:00:23,981
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+115
+00:00:24,005 --> 00:00:24,006
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+116
+00:00:24,055 --> 00:00:24,057
+33. if (index == 100)
+
+117
+00:00:24,058 --> 00:00:24,060
+37. (index++)
+
+118
+00:00:24,061 --> 00:00:24,063
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+119
+00:00:24,087 --> 00:00:24,089
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+120
+00:00:24,121 --> 00:00:24,121
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+121
+00:00:24,147 --> 00:00:24,149
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+122
+00:00:24,202 --> 00:00:24,203
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+123
+00:00:24,412 --> 00:00:24,413
+17. delay(1, CONTINUE_ON_FAILURE)
+
+124
+00:00:25,420 --> 00:00:25,423
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+125
+00:00:25,478 --> 00:00:25,478
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+126
+00:00:25,505 --> 00:00:25,506
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+127
+00:00:25,538 --> 00:00:25,539
+33. if (index == 100)
+
+128
+00:00:25,539 --> 00:00:25,541
+37. (index++)
+
+129
+00:00:25,541 --> 00:00:25,542
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+130
+00:00:25,558 --> 00:00:25,559
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+131
+00:00:25,583 --> 00:00:25,584
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+132
+00:00:25,632 --> 00:00:25,633
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+133
+00:00:25,682 --> 00:00:25,683
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+134
+00:00:25,862 --> 00:00:25,862
+17. delay(1, CONTINUE_ON_FAILURE)
+
+135
+00:00:26,865 --> 00:00:26,866
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+136
+00:00:26,918 --> 00:00:26,919
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+137
+00:00:26,945 --> 00:00:26,946
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+138
+00:00:26,985 --> 00:00:26,986
+33. if (index == 100)
+
+139
+00:00:26,986 --> 00:00:26,986
+37. (index++)
+
+140
+00:00:26,987 --> 00:00:26,987
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+141
+00:00:27,003 --> 00:00:27,003
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+142
+00:00:27,034 --> 00:00:27,035
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+143
+00:00:27,082 --> 00:00:27,083
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+144
+00:00:27,129 --> 00:00:27,130
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+145
+00:00:27,299 --> 00:00:27,300
+17. delay(1, CONTINUE_ON_FAILURE)
+
+146
+00:00:28,306 --> 00:00:28,306
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+147
+00:00:28,359 --> 00:00:28,359
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+148
+00:00:28,387 --> 00:00:28,387
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+149
+00:00:28,431 --> 00:00:28,432
+33. if (index == 100)
+
+150
+00:00:28,433 --> 00:00:28,434
+37. (index++)
+
+151
+00:00:28,435 --> 00:00:28,435
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+152
+00:00:28,450 --> 00:00:28,451
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+153
+00:00:28,507 --> 00:00:28,508
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+154
+00:00:28,537 --> 00:00:28,538
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+155
+00:00:28,602 --> 00:00:28,602
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+156
+00:00:28,781 --> 00:00:28,784
+17. delay(1, CONTINUE_ON_FAILURE)
+
+157
+00:00:29,791 --> 00:00:29,792
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+158
+00:00:29,858 --> 00:00:29,859
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+159
+00:00:29,892 --> 00:00:29,892
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+160
+00:00:29,931 --> 00:00:29,932
+33. if (index == 100)
+
+161
+00:00:29,932 --> 00:00:29,933
+37. (index++)
+
+162
+00:00:29,933 --> 00:00:29,934
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+163
+00:00:29,950 --> 00:00:29,951
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+164
+00:00:29,980 --> 00:00:29,981
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+165
+00:00:30,008 --> 00:00:30,009
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+166
+00:00:30,068 --> 00:00:30,069
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+167
+00:00:30,244 --> 00:00:30,244
+17. delay(1, CONTINUE_ON_FAILURE)
+
+168
+00:00:31,251 --> 00:00:31,251
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+169
+00:00:31,292 --> 00:00:31,293
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+170
+00:00:31,329 --> 00:00:31,330
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+171
+00:00:31,374 --> 00:00:31,375
+33. if (index == 100)
+
+172
+00:00:31,375 --> 00:00:31,376
+37. (index++)
+
+173
+00:00:31,376 --> 00:00:31,377
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+174
+00:00:31,393 --> 00:00:31,394
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+175
+00:00:31,418 --> 00:00:31,419
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+176
+00:00:31,459 --> 00:00:31,462
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+177
+00:00:31,531 --> 00:00:31,532
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+178
+00:00:31,728 --> 00:00:31,729
+17. delay(1, CONTINUE_ON_FAILURE)
+
+179
+00:00:32,736 --> 00:00:32,737
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+180
+00:00:32,779 --> 00:00:32,779
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+181
+00:00:32,815 --> 00:00:32,816
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+182
+00:00:32,861 --> 00:00:32,862
+33. if (index == 100)
+
+183
+00:00:32,862 --> 00:00:32,864
+37. (index++)
+
+184
+00:00:32,864 --> 00:00:32,865
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+185
+00:00:32,883 --> 00:00:32,884
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+186
+00:00:32,917 --> 00:00:32,917
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+187
+00:00:32,960 --> 00:00:32,960
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+188
+00:00:33,035 --> 00:00:33,035
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+189
+00:00:33,207 --> 00:00:33,207
+17. delay(1, CONTINUE_ON_FAILURE)
+
+190
+00:00:34,213 --> 00:00:34,214
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+191
+00:00:34,255 --> 00:00:34,256
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+192
+00:00:34,286 --> 00:00:34,286
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+193
+00:00:34,334 --> 00:00:34,335
+33. if (index == 100)
+
+194
+00:00:34,335 --> 00:00:34,336
+37. (index++)
+
+195
+00:00:34,336 --> 00:00:34,337
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+196
+00:00:34,365 --> 00:00:34,366
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+197
+00:00:34,400 --> 00:00:34,400
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+198
+00:00:34,439 --> 00:00:34,440
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+199
+00:00:34,497 --> 00:00:34,498
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+200
+00:00:34,689 --> 00:00:34,690
+17. delay(1, CONTINUE_ON_FAILURE)
+
+201
+00:00:35,696 --> 00:00:35,698
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+202
+00:00:35,745 --> 00:00:35,746
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+203
+00:00:35,770 --> 00:00:35,771
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+204
+00:00:35,801 --> 00:00:35,803
+33. if (index == 100)
+
+205
+00:00:35,805 --> 00:00:35,807
+37. (index++)
+
+206
+00:00:35,809 --> 00:00:35,810
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+207
+00:00:35,830 --> 00:00:35,831
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+208
+00:00:35,864 --> 00:00:35,865
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+209
+00:00:35,909 --> 00:00:35,910
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+210
+00:00:35,968 --> 00:00:35,968
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+211
+00:00:36,155 --> 00:00:36,156
+17. delay(1, CONTINUE_ON_FAILURE)
+
+212
+00:00:37,162 --> 00:00:37,163
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+213
+00:00:37,212 --> 00:00:37,212
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+214
+00:00:37,241 --> 00:00:37,242
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+215
+00:00:37,275 --> 00:00:37,276
+33. if (index == 100)
+
+216
+00:00:37,276 --> 00:00:37,276
+37. (index++)
+
+217
+00:00:37,277 --> 00:00:37,277
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+218
+00:00:37,293 --> 00:00:37,293
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+219
+00:00:37,317 --> 00:00:37,318
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+220
+00:00:37,359 --> 00:00:37,361
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+221
+00:00:37,427 --> 00:00:37,428
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+222
+00:00:37,619 --> 00:00:37,619
+17. delay(1, CONTINUE_ON_FAILURE)
+
+223
+00:00:38,626 --> 00:00:38,628
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+224
+00:00:38,673 --> 00:00:38,674
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+225
+00:00:38,703 --> 00:00:38,706
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+226
+00:00:38,758 --> 00:00:38,760
+33. if (index == 100)
+
+227
+00:00:38,765 --> 00:00:38,767
+37. (index++)
+
+228
+00:00:38,768 --> 00:00:38,769
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+229
+00:00:38,798 --> 00:00:38,798
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+230
+00:00:38,834 --> 00:00:38,835
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+231
+00:00:38,884 --> 00:00:38,885
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+232
+00:00:38,941 --> 00:00:38,942
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+233
+00:00:39,164 --> 00:00:39,165
+17. delay(1, CONTINUE_ON_FAILURE)
+
+234
+00:00:40,171 --> 00:00:40,173
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+235
+00:00:40,224 --> 00:00:40,224
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+236
+00:00:40,253 --> 00:00:40,254
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+237
+00:00:40,291 --> 00:00:40,291
+33. if (index == 100)
+
+238
+00:00:40,292 --> 00:00:40,293
+37. (index++)
+
+239
+00:00:40,293 --> 00:00:40,294
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+240
+00:00:40,308 --> 00:00:40,311
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+241
+00:00:40,345 --> 00:00:40,345
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+242
+00:00:40,387 --> 00:00:40,388
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+243
+00:00:40,434 --> 00:00:40,434
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+244
+00:00:40,621 --> 00:00:40,622
+17. delay(1, CONTINUE_ON_FAILURE)
+
+245
+00:00:41,627 --> 00:00:41,627
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+246
+00:00:41,669 --> 00:00:41,670
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+247
+00:00:41,698 --> 00:00:41,701
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+248
+00:00:41,753 --> 00:00:41,754
+33. if (index == 100)
+
+249
+00:00:41,754 --> 00:00:41,755
+37. (index++)
+
+250
+00:00:41,755 --> 00:00:41,756
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+251
+00:00:41,774 --> 00:00:41,775
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+252
+00:00:41,810 --> 00:00:41,811
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+253
+00:00:41,853 --> 00:00:41,854
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+254
+00:00:41,927 --> 00:00:41,927
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+255
+00:00:42,118 --> 00:00:42,120
+17. delay(1, CONTINUE_ON_FAILURE)
+
+256
+00:00:43,126 --> 00:00:43,127
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+257
+00:00:43,219 --> 00:00:43,220
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+258
+00:00:43,259 --> 00:00:43,260
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+259
+00:00:43,293 --> 00:00:43,294
+33. if (index == 100)
+
+260
+00:00:43,294 --> 00:00:43,294
+37. (index++)
+
+261
+00:00:43,294 --> 00:00:43,295
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+262
+00:00:43,310 --> 00:00:43,311
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+263
+00:00:43,345 --> 00:00:43,346
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+264
+00:00:43,383 --> 00:00:43,383
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+265
+00:00:43,431 --> 00:00:43,432
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+266
+00:00:43,619 --> 00:00:43,620
+17. delay(1, CONTINUE_ON_FAILURE)
+
+267
+00:00:44,626 --> 00:00:44,626
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+268
+00:00:44,679 --> 00:00:44,679
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+269
+00:00:44,708 --> 00:00:44,708
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+270
+00:00:44,749 --> 00:00:44,750
+33. if (index == 100)
+
+271
+00:00:44,750 --> 00:00:44,751
+37. (index++)
+
+272
+00:00:44,752 --> 00:00:44,752
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+273
+00:00:44,771 --> 00:00:44,772
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+274
+00:00:44,803 --> 00:00:44,806
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+275
+00:00:44,877 --> 00:00:44,877
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+276
+00:00:44,922 --> 00:00:44,923
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+277
+00:00:45,128 --> 00:00:45,130
+17. delay(1, CONTINUE_ON_FAILURE)
+
+278
+00:00:46,135 --> 00:00:46,135
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+279
+00:00:46,181 --> 00:00:46,183
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+280
+00:00:46,218 --> 00:00:46,218
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+281
+00:00:46,258 --> 00:00:46,258
+33. if (index == 100)
+
+282
+00:00:46,259 --> 00:00:46,259
+37. (index++)
+
+283
+00:00:46,259 --> 00:00:46,260
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+284
+00:00:46,278 --> 00:00:46,278
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+285
+00:00:46,301 --> 00:00:46,302
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+286
+00:00:46,354 --> 00:00:46,355
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+287
+00:00:46,404 --> 00:00:46,405
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+288
+00:00:46,597 --> 00:00:46,601
+17. delay(1, CONTINUE_ON_FAILURE)
+
+289
+00:00:47,608 --> 00:00:47,609
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+290
+00:00:47,668 --> 00:00:47,669
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+291
+00:00:47,697 --> 00:00:47,698
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+292
+00:00:47,737 --> 00:00:47,738
+33. if (index == 100)
+
+293
+00:00:47,738 --> 00:00:47,739
+37. (index++)
+
+294
+00:00:47,739 --> 00:00:47,740
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+295
+00:00:47,756 --> 00:00:47,756
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+296
+00:00:47,790 --> 00:00:47,792
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+297
+00:00:47,841 --> 00:00:47,843
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+298
+00:00:47,886 --> 00:00:47,886
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+299
+00:00:48,098 --> 00:00:48,099
+17. delay(1, CONTINUE_ON_FAILURE)
+
+300
+00:00:49,103 --> 00:00:49,103
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+301
+00:00:49,150 --> 00:00:49,151
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+302
+00:00:49,181 --> 00:00:49,181
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+303
+00:00:49,215 --> 00:00:49,218
+33. if (index == 100)
+
+304
+00:00:49,221 --> 00:00:49,223
+37. (index++)
+
+305
+00:00:49,225 --> 00:00:49,226
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+306
+00:00:49,246 --> 00:00:49,247
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+307
+00:00:49,273 --> 00:00:49,279
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+308
+00:00:49,306 --> 00:00:49,306
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+309
+00:00:49,357 --> 00:00:49,358
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+310
+00:00:49,532 --> 00:00:49,533
+17. delay(1, CONTINUE_ON_FAILURE)
+
+311
+00:00:50,539 --> 00:00:50,540
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+312
+00:00:50,580 --> 00:00:50,580
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+313
+00:00:50,613 --> 00:00:50,613
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+314
+00:00:50,647 --> 00:00:50,648
+33. if (index == 100)
+
+315
+00:00:50,648 --> 00:00:50,649
+37. (index++)
+
+316
+00:00:50,652 --> 00:00:50,654
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+317
+00:00:50,680 --> 00:00:50,682
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+318
+00:00:50,718 --> 00:00:50,728
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+319
+00:00:50,756 --> 00:00:50,756
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+320
+00:00:50,827 --> 00:00:50,828
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+321
+00:00:51,040 --> 00:00:51,041
+17. delay(1, CONTINUE_ON_FAILURE)
+
+322
+00:00:52,047 --> 00:00:52,049
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+323
+00:00:52,100 --> 00:00:52,101
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+324
+00:00:52,124 --> 00:00:52,125
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+325
+00:00:52,158 --> 00:00:52,160
+33. if (index == 100)
+
+326
+00:00:52,160 --> 00:00:52,162
+37. (index++)
+
+327
+00:00:52,162 --> 00:00:52,163
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+328
+00:00:52,181 --> 00:00:52,181
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+329
+00:00:52,209 --> 00:00:52,210
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+330
+00:00:52,264 --> 00:00:52,266
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+331
+00:00:52,318 --> 00:00:52,318
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+332
+00:00:52,521 --> 00:00:52,524
+17. delay(1, CONTINUE_ON_FAILURE)
+
+333
+00:00:53,529 --> 00:00:53,530
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+334
+00:00:53,572 --> 00:00:53,572
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+335
+00:00:53,599 --> 00:00:53,600
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+336
+00:00:53,639 --> 00:00:53,640
+33. if (index == 100)
+
+337
+00:00:53,641 --> 00:00:53,643
+37. (index++)
+
+338
+00:00:53,643 --> 00:00:53,644
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+339
+00:00:53,674 --> 00:00:53,674
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+340
+00:00:53,702 --> 00:00:53,702
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+341
+00:00:53,753 --> 00:00:53,754
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+342
+00:00:53,808 --> 00:00:53,809
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+343
+00:00:54,042 --> 00:00:54,044
+17. delay(1, CONTINUE_ON_FAILURE)
+
+344
+00:00:55,050 --> 00:00:55,051
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+345
+00:00:55,107 --> 00:00:55,108
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+346
+00:00:55,131 --> 00:00:55,132
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+347
+00:00:55,163 --> 00:00:55,164
+33. if (index == 100)
+
+348
+00:00:55,164 --> 00:00:55,165
+37. (index++)
+
+349
+00:00:55,165 --> 00:00:55,166
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+350
+00:00:55,182 --> 00:00:55,183
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+351
+00:00:55,209 --> 00:00:55,210
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+352
+00:00:55,252 --> 00:00:55,254
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+353
+00:00:55,309 --> 00:00:55,310
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+354
+00:00:55,519 --> 00:00:55,520
+17. delay(1, CONTINUE_ON_FAILURE)
+
+355
+00:00:56,525 --> 00:00:56,527
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+356
+00:00:56,574 --> 00:00:56,576
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+357
+00:00:56,605 --> 00:00:56,605
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+358
+00:00:56,646 --> 00:00:56,647
+33. if (index == 100)
+
+359
+00:00:56,647 --> 00:00:56,648
+37. (index++)
+
+360
+00:00:56,648 --> 00:00:56,649
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+361
+00:00:56,667 --> 00:00:56,668
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+362
+00:00:56,689 --> 00:00:56,690
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+363
+00:00:56,731 --> 00:00:56,733
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+364
+00:00:56,790 --> 00:00:56,790
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+365
+00:00:57,003 --> 00:00:57,004
+17. delay(1, CONTINUE_ON_FAILURE)
+
+366
+00:00:58,010 --> 00:00:58,010
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+367
+00:00:58,050 --> 00:00:58,050
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+368
+00:00:58,078 --> 00:00:58,078
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+369
+00:00:58,115 --> 00:00:58,116
+33. if (index == 100)
+
+370
+00:00:58,117 --> 00:00:58,118
+37. (index++)
+
+371
+00:00:58,119 --> 00:00:58,119
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+372
+00:00:58,147 --> 00:00:58,147
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+373
+00:00:58,168 --> 00:00:58,168
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+374
+00:00:58,209 --> 00:00:58,210
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+375
+00:00:58,257 --> 00:00:58,258
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+376
+00:00:58,467 --> 00:00:58,468
+17. delay(1, CONTINUE_ON_FAILURE)
+
+377
+00:00:59,475 --> 00:00:59,475
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+378
+00:00:59,522 --> 00:00:59,523
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+379
+00:00:59,548 --> 00:00:59,548
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+380
+00:00:59,583 --> 00:00:59,584
+33. if (index == 100)
+
+381
+00:00:59,584 --> 00:00:59,585
+37. (index++)
+
+382
+00:00:59,585 --> 00:00:59,585
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+383
+00:00:59,601 --> 00:00:59,602
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+384
+00:00:59,636 --> 00:00:59,637
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+385
+00:00:59,677 --> 00:00:59,679
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+386
+00:00:59,727 --> 00:00:59,727
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+387
+00:00:59,919 --> 00:00:59,920
+17. delay(1, CONTINUE_ON_FAILURE)
+
+388
+00:01:00,926 --> 00:01:00,926
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+389
+00:01:01,002 --> 00:01:01,003
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+390
+00:01:01,029 --> 00:01:01,029
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+391
+00:01:01,074 --> 00:01:01,075
+33. if (index == 100)
+
+392
+00:01:01,075 --> 00:01:01,076
+37. (index++)
+
+393
+00:01:01,076 --> 00:01:01,077
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+394
+00:01:01,099 --> 00:01:01,101
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+395
+00:01:01,144 --> 00:01:01,145
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+396
+00:01:01,172 --> 00:01:01,174
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+397
+00:01:01,228 --> 00:01:01,229
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+398
+00:01:01,459 --> 00:01:01,461
+17. delay(1, CONTINUE_ON_FAILURE)
+
+399
+00:01:02,468 --> 00:01:02,469
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+400
+00:01:02,514 --> 00:01:02,514
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+401
+00:01:02,546 --> 00:01:02,547
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+402
+00:01:02,589 --> 00:01:02,590
+33. if (index == 100)
+
+403
+00:01:02,590 --> 00:01:02,591
+37. (index++)
+
+404
+00:01:02,592 --> 00:01:02,593
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+405
+00:01:02,609 --> 00:01:02,610
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+406
+00:01:02,632 --> 00:01:02,632
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+407
+00:01:02,673 --> 00:01:02,676
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+408
+00:01:02,737 --> 00:01:02,738
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+409
+00:01:02,944 --> 00:01:02,946
+17. delay(1, CONTINUE_ON_FAILURE)
+
+410
+00:01:03,951 --> 00:01:03,955
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+411
+00:01:04,007 --> 00:01:04,008
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+412
+00:01:04,031 --> 00:01:04,032
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+413
+00:01:04,066 --> 00:01:04,067
+33. if (index == 100)
+
+414
+00:01:04,068 --> 00:01:04,068
+37. (index++)
+
+415
+00:01:04,069 --> 00:01:04,069
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+416
+00:01:04,085 --> 00:01:04,086
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+417
+00:01:04,107 --> 00:01:04,107
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+418
+00:01:04,158 --> 00:01:04,159
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+419
+00:01:04,211 --> 00:01:04,211
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+420
+00:01:04,439 --> 00:01:04,440
+17. delay(1, CONTINUE_ON_FAILURE)
+
+421
+00:01:05,447 --> 00:01:05,447
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+422
+00:01:05,488 --> 00:01:05,489
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+423
+00:01:05,515 --> 00:01:05,515
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+424
+00:01:05,557 --> 00:01:05,559
+33. if (index == 100)
+
+425
+00:01:05,560 --> 00:01:05,562
+37. (index++)
+
+426
+00:01:05,563 --> 00:01:05,564
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+427
+00:01:05,585 --> 00:01:05,585
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+428
+00:01:05,618 --> 00:01:05,619
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+429
+00:01:05,661 --> 00:01:05,662
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+430
+00:01:05,739 --> 00:01:05,740
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+431
+00:01:05,926 --> 00:01:05,926
+17. delay(1, CONTINUE_ON_FAILURE)
+
+432
+00:01:06,932 --> 00:01:06,933
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+433
+00:01:06,982 --> 00:01:06,983
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+434
+00:01:07,008 --> 00:01:07,009
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+435
+00:01:07,045 --> 00:01:07,045
+33. if (index == 100)
+
+436
+00:01:07,045 --> 00:01:07,046
+37. (index++)
+
+437
+00:01:07,046 --> 00:01:07,046
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+438
+00:01:07,069 --> 00:01:07,071
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+439
+00:01:07,099 --> 00:01:07,099
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+440
+00:01:07,133 --> 00:01:07,136
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+441
+00:01:07,185 --> 00:01:07,186
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+442
+00:01:07,380 --> 00:01:07,381
+17. delay(1, CONTINUE_ON_FAILURE)
+
+443
+00:01:08,386 --> 00:01:08,386
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+444
+00:01:08,435 --> 00:01:08,435
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+445
+00:01:08,462 --> 00:01:08,463
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+446
+00:01:08,499 --> 00:01:08,499
+33. if (index == 100)
+
+447
+00:01:08,500 --> 00:01:08,500
+37. (index++)
+
+448
+00:01:08,500 --> 00:01:08,501
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+449
+00:01:08,519 --> 00:01:08,520
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+450
+00:01:08,559 --> 00:01:08,562
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+451
+00:01:08,597 --> 00:01:08,597
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+452
+00:01:08,655 --> 00:01:08,656
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+453
+00:01:08,884 --> 00:01:08,885
+17. delay(1, CONTINUE_ON_FAILURE)
+
+454
+00:01:09,891 --> 00:01:09,891
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+455
+00:01:09,938 --> 00:01:09,938
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+456
+00:01:09,976 --> 00:01:09,976
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+457
+00:01:10,013 --> 00:01:10,014
+33. if (index == 100)
+
+458
+00:01:10,014 --> 00:01:10,014
+37. (index++)
+
+459
+00:01:10,015 --> 00:01:10,015
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+460
+00:01:10,031 --> 00:01:10,031
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+461
+00:01:10,054 --> 00:01:10,054
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+462
+00:01:10,082 --> 00:01:10,083
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+463
+00:01:10,159 --> 00:01:10,160
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+464
+00:01:10,390 --> 00:01:10,397
+17. delay(1, CONTINUE_ON_FAILURE)
+
+465
+00:01:11,402 --> 00:01:11,402
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+466
+00:01:11,447 --> 00:01:11,448
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+467
+00:01:11,491 --> 00:01:11,491
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+468
+00:01:11,532 --> 00:01:11,533
+33. if (index == 100)
+
+469
+00:01:11,533 --> 00:01:11,534
+37. (index++)
+
+470
+00:01:11,534 --> 00:01:11,534
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+471
+00:01:11,551 --> 00:01:11,552
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+472
+00:01:11,578 --> 00:01:11,579
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+473
+00:01:11,619 --> 00:01:11,620
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+474
+00:01:11,689 --> 00:01:11,690
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+475
+00:01:11,864 --> 00:01:11,865
+17. delay(1, CONTINUE_ON_FAILURE)
+
+476
+00:01:12,870 --> 00:01:12,871
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+477
+00:01:12,910 --> 00:01:12,911
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+478
+00:01:12,936 --> 00:01:12,937
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+479
+00:01:12,967 --> 00:01:12,968
+33. if (index == 100)
+
+480
+00:01:12,968 --> 00:01:12,968
+37. (index++)
+
+481
+00:01:12,969 --> 00:01:12,969
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+482
+00:01:12,995 --> 00:01:12,996
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+483
+00:01:13,028 --> 00:01:13,029
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+484
+00:01:13,057 --> 00:01:13,058
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+485
+00:01:13,106 --> 00:01:13,107
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+486
+00:01:13,292 --> 00:01:13,292
+17. delay(1, CONTINUE_ON_FAILURE)
+
+487
+00:01:14,297 --> 00:01:14,298
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+488
+00:01:14,340 --> 00:01:14,340
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+489
+00:01:14,377 --> 00:01:14,377
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+490
+00:01:14,419 --> 00:01:14,420
+33. if (index == 100)
+
+491
+00:01:14,420 --> 00:01:14,420
+37. (index++)
+
+492
+00:01:14,421 --> 00:01:14,422
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+493
+00:01:14,453 --> 00:01:14,454
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+494
+00:01:14,494 --> 00:01:14,495
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+495
+00:01:14,519 --> 00:01:14,520
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+496
+00:01:14,575 --> 00:01:14,575
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+497
+00:01:14,809 --> 00:01:14,810
+17. delay(1, CONTINUE_ON_FAILURE)
+
+498
+00:01:15,816 --> 00:01:15,816
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+499
+00:01:15,872 --> 00:01:15,873
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+500
+00:01:15,899 --> 00:01:15,900
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+501
+00:01:15,938 --> 00:01:15,939
+33. if (index == 100)
+
+502
+00:01:15,939 --> 00:01:15,940
+37. (index++)
+
+503
+00:01:15,940 --> 00:01:15,941
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+504
+00:01:15,960 --> 00:01:15,961
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+505
+00:01:16,008 --> 00:01:16,008
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+506
+00:01:16,041 --> 00:01:16,042
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+507
+00:01:16,106 --> 00:01:16,106
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+508
+00:01:16,312 --> 00:01:16,313
+17. delay(1, CONTINUE_ON_FAILURE)
+
+509
+00:01:17,319 --> 00:01:17,319
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+510
+00:01:17,368 --> 00:01:17,368
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+511
+00:01:17,391 --> 00:01:17,392
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+512
+00:01:17,422 --> 00:01:17,423
+33. if (index == 100)
+
+513
+00:01:17,423 --> 00:01:17,424
+37. (index++)
+
+514
+00:01:17,424 --> 00:01:17,425
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+515
+00:01:17,444 --> 00:01:17,445
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+516
+00:01:17,468 --> 00:01:17,468
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+517
+00:01:17,505 --> 00:01:17,506
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+518
+00:01:17,572 --> 00:01:17,573
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+519
+00:01:17,789 --> 00:01:17,789
+17. delay(1, CONTINUE_ON_FAILURE)
+
+520
+00:01:18,794 --> 00:01:18,795
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+521
+00:01:18,838 --> 00:01:18,838
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+522
+00:01:18,862 --> 00:01:18,863
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+523
+00:01:18,894 --> 00:01:18,895
+33. if (index == 100)
+
+524
+00:01:18,895 --> 00:01:18,897
+37. (index++)
+
+525
+00:01:18,898 --> 00:01:18,900
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+526
+00:01:18,924 --> 00:01:18,924
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+527
+00:01:18,990 --> 00:01:18,991
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+528
+00:01:19,033 --> 00:01:19,035
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+529
+00:01:19,097 --> 00:01:19,098
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+530
+00:01:19,321 --> 00:01:19,321
+17. delay(1, CONTINUE_ON_FAILURE)
+
+531
+00:01:20,325 --> 00:01:20,326
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+532
+00:01:20,366 --> 00:01:20,366
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+533
+00:01:20,397 --> 00:01:20,398
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+534
+00:01:20,463 --> 00:01:20,464
+33. if (index == 100)
+
+535
+00:01:20,464 --> 00:01:20,465
+37. (index++)
+
+536
+00:01:20,465 --> 00:01:20,465
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+537
+00:01:20,483 --> 00:01:20,484
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+538
+00:01:20,514 --> 00:01:20,515
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+539
+00:01:20,536 --> 00:01:20,537
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+540
+00:01:20,608 --> 00:01:20,610
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+541
+00:01:20,966 --> 00:01:20,966
+17. delay(1, CONTINUE_ON_FAILURE)
+
+542
+00:01:21,972 --> 00:01:21,973
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+543
+00:01:22,018 --> 00:01:22,019
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+544
+00:01:22,050 --> 00:01:22,050
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+545
+00:01:22,086 --> 00:01:22,087
+33. if (index == 100)
+
+546
+00:01:22,088 --> 00:01:22,088
+37. (index++)
+
+547
+00:01:22,089 --> 00:01:22,089
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+548
+00:01:22,105 --> 00:01:22,106
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+549
+00:01:22,135 --> 00:01:22,140
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+550
+00:01:22,215 --> 00:01:22,216
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+551
+00:01:22,261 --> 00:01:22,261
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+552
+00:01:22,441 --> 00:01:22,442
+17. delay(1, CONTINUE_ON_FAILURE)
+
+553
+00:01:23,446 --> 00:01:23,446
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+554
+00:01:23,486 --> 00:01:23,486
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+555
+00:01:23,522 --> 00:01:23,523
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+556
+00:01:23,564 --> 00:01:23,565
+33. if (index == 100)
+
+557
+00:01:23,565 --> 00:01:23,566
+37. (index++)
+
+558
+00:01:23,566 --> 00:01:23,566
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+559
+00:01:23,595 --> 00:01:23,595
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+560
+00:01:23,627 --> 00:01:23,628
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+561
+00:01:23,656 --> 00:01:23,657
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+562
+00:01:23,717 --> 00:01:23,718
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+563
+00:01:23,922 --> 00:01:23,922
+17. delay(1, CONTINUE_ON_FAILURE)
+
+564
+00:01:24,927 --> 00:01:24,928
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+565
+00:01:24,986 --> 00:01:24,987
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+566
+00:01:25,013 --> 00:01:25,014
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+567
+00:01:25,050 --> 00:01:25,051
+33. if (index == 100)
+
+568
+00:01:25,051 --> 00:01:25,051
+37. (index++)
+
+569
+00:01:25,052 --> 00:01:25,052
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+570
+00:01:25,069 --> 00:01:25,070
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+571
+00:01:25,096 --> 00:01:25,096
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+572
+00:01:25,139 --> 00:01:25,141
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+573
+00:01:25,198 --> 00:01:25,198
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+574
+00:01:25,443 --> 00:01:25,443
+17. delay(1, CONTINUE_ON_FAILURE)
+
+575
+00:01:26,448 --> 00:01:26,451
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+576
+00:01:26,517 --> 00:01:26,517
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+577
+00:01:26,542 --> 00:01:26,543
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+578
+00:01:26,587 --> 00:01:26,587
+33. if (index == 100)
+
+579
+00:01:26,587 --> 00:01:26,588
+37. (index++)
+
+580
+00:01:26,588 --> 00:01:26,589
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+581
+00:01:26,618 --> 00:01:26,619
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+582
+00:01:26,647 --> 00:01:26,647
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+583
+00:01:26,672 --> 00:01:26,672
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+584
+00:01:26,729 --> 00:01:26,733
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+585
+00:01:26,934 --> 00:01:26,935
+17. delay(1, CONTINUE_ON_FAILURE)
+
+586
+00:01:27,937 --> 00:01:27,938
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+587
+00:01:27,976 --> 00:01:27,976
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+588
+00:01:27,998 --> 00:01:27,999
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+589
+00:01:28,042 --> 00:01:28,043
+33. if (index == 100)
+
+590
+00:01:28,044 --> 00:01:28,045
+37. (index++)
+
+591
+00:01:28,046 --> 00:01:28,048
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+592
+00:01:28,066 --> 00:01:28,067
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+593
+00:01:28,090 --> 00:01:28,090
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+594
+00:01:28,128 --> 00:01:28,129
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+595
+00:01:28,174 --> 00:01:28,174
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+596
+00:01:28,343 --> 00:01:28,344
+17. delay(1, CONTINUE_ON_FAILURE)
+
+597
+00:01:29,348 --> 00:01:29,349
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+598
+00:01:29,387 --> 00:01:29,388
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+599
+00:01:29,408 --> 00:01:29,408
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+600
+00:01:29,454 --> 00:01:29,455
+33. if (index == 100)
+
+601
+00:01:29,455 --> 00:01:29,456
+37. (index++)
+
+602
+00:01:29,456 --> 00:01:29,457
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+603
+00:01:29,473 --> 00:01:29,474
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+604
+00:01:29,503 --> 00:01:29,503
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+605
+00:01:29,545 --> 00:01:29,546
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+606
+00:01:29,593 --> 00:01:29,594
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+607
+00:01:29,787 --> 00:01:29,788
+17. delay(1, CONTINUE_ON_FAILURE)
+
+608
+00:01:30,792 --> 00:01:30,792
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+609
+00:01:30,831 --> 00:01:30,831
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+610
+00:01:30,854 --> 00:01:30,855
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+611
+00:01:30,890 --> 00:01:30,890
+33. if (index == 100)
+
+612
+00:01:30,891 --> 00:01:30,891
+37. (index++)
+
+613
+00:01:30,891 --> 00:01:30,891
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+614
+00:01:30,915 --> 00:01:30,917
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+615
+00:01:30,941 --> 00:01:30,942
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+616
+00:01:30,974 --> 00:01:30,977
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+617
+00:01:31,021 --> 00:01:31,021
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+618
+00:01:31,194 --> 00:01:31,194
+17. delay(1, CONTINUE_ON_FAILURE)
+
+619
+00:01:32,199 --> 00:01:32,200
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+620
+00:01:32,250 --> 00:01:32,251
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+621
+00:01:32,277 --> 00:01:32,278
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+622
+00:01:32,323 --> 00:01:32,324
+33. if (index == 100)
+
+623
+00:01:32,324 --> 00:01:32,325
+37. (index++)
+
+624
+00:01:32,325 --> 00:01:32,326
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+625
+00:01:32,343 --> 00:01:32,343
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+626
+00:01:32,364 --> 00:01:32,365
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+627
+00:01:32,437 --> 00:01:32,440
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+628
+00:01:32,489 --> 00:01:32,490
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+629
+00:01:32,713 --> 00:01:32,713
+17. delay(1, CONTINUE_ON_FAILURE)
+
+630
+00:01:33,718 --> 00:01:33,719
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+631
+00:01:33,768 --> 00:01:33,768
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+632
+00:01:33,790 --> 00:01:33,790
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+633
+00:01:33,825 --> 00:01:33,825
+33. if (index == 100)
+
+634
+00:01:33,826 --> 00:01:33,826
+37. (index++)
+
+635
+00:01:33,826 --> 00:01:33,826
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+636
+00:01:33,849 --> 00:01:33,851
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+637
+00:01:33,882 --> 00:01:33,882
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+638
+00:01:33,925 --> 00:01:33,925
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+639
+00:01:33,976 --> 00:01:33,976
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+640
+00:01:34,159 --> 00:01:34,159
+17. delay(1, CONTINUE_ON_FAILURE)
+
+641
+00:01:35,162 --> 00:01:35,163
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+642
+00:01:35,200 --> 00:01:35,200
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+643
+00:01:35,223 --> 00:01:35,223
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+644
+00:01:35,258 --> 00:01:35,259
+33. if (index == 100)
+
+645
+00:01:35,260 --> 00:01:35,262
+37. (index++)
+
+646
+00:01:35,263 --> 00:01:35,265
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+647
+00:01:35,292 --> 00:01:35,292
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+648
+00:01:35,316 --> 00:01:35,317
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+649
+00:01:35,358 --> 00:01:35,359
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+650
+00:01:35,404 --> 00:01:35,405
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+651
+00:01:35,583 --> 00:01:35,583
+17. delay(1, CONTINUE_ON_FAILURE)
+
+652
+00:01:36,587 --> 00:01:36,588
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+653
+00:01:36,624 --> 00:01:36,624
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+654
+00:01:36,649 --> 00:01:36,650
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+655
+00:01:36,688 --> 00:01:36,689
+33. if (index == 100)
+
+656
+00:01:36,689 --> 00:01:36,691
+37. (index++)
+
+657
+00:01:36,691 --> 00:01:36,693
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+658
+00:01:36,721 --> 00:01:36,721
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+659
+00:01:36,744 --> 00:01:36,744
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+660
+00:01:36,773 --> 00:01:36,774
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+661
+00:01:36,827 --> 00:01:36,827
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+662
+00:01:37,012 --> 00:01:37,013
+17. delay(1, CONTINUE_ON_FAILURE)
+
+663
+00:01:38,019 --> 00:01:38,019
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+664
+00:01:38,057 --> 00:01:38,058
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+665
+00:01:38,079 --> 00:01:38,080
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+666
+00:01:38,109 --> 00:01:38,109
+33. if (index == 100)
+
+667
+00:01:38,110 --> 00:01:38,110
+37. (index++)
+
+668
+00:01:38,110 --> 00:01:38,110
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+669
+00:01:38,138 --> 00:01:38,139
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+670
+00:01:38,161 --> 00:01:38,162
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+671
+00:01:38,189 --> 00:01:38,189
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+672
+00:01:38,259 --> 00:01:38,260
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+673
+00:01:38,502 --> 00:01:38,503
+17. delay(1, CONTINUE_ON_FAILURE)
+
+674
+00:01:39,507 --> 00:01:39,508
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+675
+00:01:39,555 --> 00:01:39,556
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+676
+00:01:39,583 --> 00:01:39,584
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+677
+00:01:39,621 --> 00:01:39,622
+33. if (index == 100)
+
+678
+00:01:39,622 --> 00:01:39,622
+37. (index++)
+
+679
+00:01:39,622 --> 00:01:39,623
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+680
+00:01:39,647 --> 00:01:39,648
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+681
+00:01:39,678 --> 00:01:39,678
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+682
+00:01:39,716 --> 00:01:39,717
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+683
+00:01:39,772 --> 00:01:39,772
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+684
+00:01:40,082 --> 00:01:40,082
+17. delay(1, CONTINUE_ON_FAILURE)
+
+685
+00:01:41,088 --> 00:01:41,089
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+686
+00:01:41,129 --> 00:01:41,129
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+687
+00:01:41,153 --> 00:01:41,154
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+688
+00:01:41,185 --> 00:01:41,185
+33. if (index == 100)
+
+689
+00:01:41,186 --> 00:01:41,186
+37. (index++)
+
+690
+00:01:41,186 --> 00:01:41,186
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+691
+00:01:41,208 --> 00:01:41,209
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+692
+00:01:41,239 --> 00:01:41,240
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+693
+00:01:41,266 --> 00:01:41,267
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+694
+00:01:41,330 --> 00:01:41,330
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+695
+00:01:41,535 --> 00:01:41,535
+17. delay(1, CONTINUE_ON_FAILURE)
+
+696
+00:01:42,539 --> 00:01:42,540
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+697
+00:01:42,603 --> 00:01:42,603
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+698
+00:01:42,660 --> 00:01:42,661
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+699
+00:01:42,699 --> 00:01:42,699
+33. if (index == 100)
+
+700
+00:01:42,699 --> 00:01:42,700
+37. (index++)
+
+701
+00:01:42,700 --> 00:01:42,700
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+702
+00:01:42,720 --> 00:01:42,721
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+703
+00:01:42,747 --> 00:01:42,747
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+704
+00:01:42,792 --> 00:01:42,792
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+705
+00:01:42,858 --> 00:01:42,859
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+706
+00:01:43,112 --> 00:01:43,113
+17. delay(1, CONTINUE_ON_FAILURE)
+
+707
+00:01:44,118 --> 00:01:44,119
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+708
+00:01:44,162 --> 00:01:44,163
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+709
+00:01:44,189 --> 00:01:44,189
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+710
+00:01:44,238 --> 00:01:44,239
+33. if (index == 100)
+
+711
+00:01:44,239 --> 00:01:44,240
+37. (index++)
+
+712
+00:01:44,240 --> 00:01:44,241
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+713
+00:01:44,259 --> 00:01:44,259
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+714
+00:01:44,285 --> 00:01:44,286
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+715
+00:01:44,313 --> 00:01:44,314
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+716
+00:01:44,386 --> 00:01:44,386
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+717
+00:01:44,803 --> 00:01:44,804
+17. delay(1, CONTINUE_ON_FAILURE)
+
+718
+00:01:45,810 --> 00:01:45,811
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+719
+00:01:45,864 --> 00:01:45,865
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+720
+00:01:45,890 --> 00:01:45,890
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+721
+00:01:45,924 --> 00:01:45,925
+33. if (index == 100)
+
+722
+00:01:45,925 --> 00:01:45,926
+37. (index++)
+
+723
+00:01:45,926 --> 00:01:45,926
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+724
+00:01:45,945 --> 00:01:45,946
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+725
+00:01:45,978 --> 00:01:45,979
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+726
+00:01:46,023 --> 00:01:46,024
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+727
+00:01:46,070 --> 00:01:46,070
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+728
+00:01:46,300 --> 00:01:46,301
+17. delay(1, CONTINUE_ON_FAILURE)
+
+729
+00:01:47,307 --> 00:01:47,310
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+730
+00:01:47,371 --> 00:01:47,371
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+731
+00:01:47,398 --> 00:01:47,399
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+732
+00:01:47,434 --> 00:01:47,434
+33. if (index == 100)
+
+733
+00:01:47,435 --> 00:01:47,435
+37. (index++)
+
+734
+00:01:47,435 --> 00:01:47,436
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+735
+00:01:47,453 --> 00:01:47,454
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+736
+00:01:47,485 --> 00:01:47,486
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+737
+00:01:47,531 --> 00:01:47,531
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+738
+00:01:47,589 --> 00:01:47,590
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+739
+00:01:47,948 --> 00:01:47,949
+17. delay(1, CONTINUE_ON_FAILURE)
+
+740
+00:01:48,955 --> 00:01:48,958
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+741
+00:01:49,012 --> 00:01:49,013
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+742
+00:01:49,039 --> 00:01:49,040
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+743
+00:01:49,076 --> 00:01:49,076
+33. if (index == 100)
+
+744
+00:01:49,077 --> 00:01:49,077
+37. (index++)
+
+745
+00:01:49,078 --> 00:01:49,078
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+746
+00:01:49,098 --> 00:01:49,098
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+747
+00:01:49,132 --> 00:01:49,133
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+748
+00:01:49,170 --> 00:01:49,171
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+749
+00:01:49,219 --> 00:01:49,220
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+750
+00:01:49,411 --> 00:01:49,412
+17. delay(1, CONTINUE_ON_FAILURE)
+
+751
+00:01:50,418 --> 00:01:50,418
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+752
+00:01:50,465 --> 00:01:50,466
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+753
+00:01:50,496 --> 00:01:50,496
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+754
+00:01:50,529 --> 00:01:50,531
+33. if (index == 100)
+
+755
+00:01:50,531 --> 00:01:50,533
+37. (index++)
+
+756
+00:01:50,533 --> 00:01:50,535
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+757
+00:01:50,559 --> 00:01:50,560
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+758
+00:01:50,586 --> 00:01:50,586
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+759
+00:01:50,631 --> 00:01:50,633
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+760
+00:01:50,678 --> 00:01:50,678
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+761
+00:01:50,900 --> 00:01:50,900
+17. delay(1, CONTINUE_ON_FAILURE)
+
+762
+00:01:51,904 --> 00:01:51,904
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+763
+00:01:51,950 --> 00:01:51,951
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+764
+00:01:51,976 --> 00:01:51,977
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+765
+00:01:52,012 --> 00:01:52,013
+33. if (index == 100)
+
+766
+00:01:52,013 --> 00:01:52,014
+37. (index++)
+
+767
+00:01:52,014 --> 00:01:52,014
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+768
+00:01:52,035 --> 00:01:52,035
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+769
+00:01:52,058 --> 00:01:52,058
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+770
+00:01:52,100 --> 00:01:52,101
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+771
+00:01:52,166 --> 00:01:52,167
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+772
+00:01:52,349 --> 00:01:52,351
+17. delay(1, CONTINUE_ON_FAILURE)
+
+773
+00:01:53,354 --> 00:01:53,355
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+774
+00:01:53,401 --> 00:01:53,401
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+775
+00:01:53,427 --> 00:01:53,428
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+776
+00:01:53,463 --> 00:01:53,464
+33. if (index == 100)
+
+777
+00:01:53,464 --> 00:01:53,465
+37. (index++)
+
+778
+00:01:53,465 --> 00:01:53,466
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+779
+00:01:53,489 --> 00:01:53,490
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+780
+00:01:53,525 --> 00:01:53,525
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+781
+00:01:53,564 --> 00:01:53,565
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+782
+00:01:53,617 --> 00:01:53,617
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+783
+00:01:53,804 --> 00:01:53,805
+17. delay(1, CONTINUE_ON_FAILURE)
+
+784
+00:01:54,810 --> 00:01:54,810
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+785
+00:01:54,852 --> 00:01:54,852
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+786
+00:01:54,878 --> 00:01:54,879
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+787
+00:01:54,909 --> 00:01:54,909
+33. if (index == 100)
+
+788
+00:01:54,910 --> 00:01:54,910
+37. (index++)
+
+789
+00:01:54,910 --> 00:01:54,910
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+790
+00:01:54,941 --> 00:01:54,942
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+791
+00:01:54,965 --> 00:01:54,966
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+792
+00:01:55,007 --> 00:01:55,009
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+793
+00:01:55,052 --> 00:01:55,052
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+794
+00:01:55,228 --> 00:01:55,229
+17. delay(1, CONTINUE_ON_FAILURE)
+
+795
+00:01:56,236 --> 00:01:56,236
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+796
+00:01:56,284 --> 00:01:56,284
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+797
+00:01:56,308 --> 00:01:56,309
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+798
+00:01:56,346 --> 00:01:56,347
+33. if (index == 100)
+
+799
+00:01:56,348 --> 00:01:56,348
+37. (index++)
+
+800
+00:01:56,349 --> 00:01:56,351
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+801
+00:01:56,382 --> 00:01:56,382
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+802
+00:01:56,411 --> 00:01:56,412
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+803
+00:01:56,450 --> 00:01:56,451
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+804
+00:01:56,523 --> 00:01:56,524
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+805
+00:01:56,808 --> 00:01:56,809
+17. delay(1, CONTINUE_ON_FAILURE)
+
+806
+00:01:57,815 --> 00:01:57,815
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+807
+00:01:57,859 --> 00:01:57,859
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+808
+00:01:57,881 --> 00:01:57,882
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+809
+00:01:57,917 --> 00:01:57,918
+33. if (index == 100)
+
+810
+00:01:57,918 --> 00:01:57,919
+37. (index++)
+
+811
+00:01:57,920 --> 00:01:57,921
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+812
+00:01:57,948 --> 00:01:57,949
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+813
+00:01:57,970 --> 00:01:57,971
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+814
+00:01:58,002 --> 00:01:58,003
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+815
+00:01:58,055 --> 00:01:58,056
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+816
+00:01:58,277 --> 00:01:58,278
+17. delay(1, CONTINUE_ON_FAILURE)
+
+817
+00:01:59,283 --> 00:01:59,284
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+818
+00:01:59,323 --> 00:01:59,324
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+819
+00:01:59,346 --> 00:01:59,346
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+820
+00:01:59,400 --> 00:01:59,400
+33. if (index == 100)
+
+821
+00:01:59,400 --> 00:01:59,401
+37. (index++)
+
+822
+00:01:59,401 --> 00:01:59,403
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+823
+00:01:59,422 --> 00:01:59,423
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+824
+00:01:59,452 --> 00:01:59,455
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+825
+00:01:59,482 --> 00:01:59,483
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+826
+00:01:59,558 --> 00:01:59,559
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+827
+00:01:59,743 --> 00:01:59,744
+17. delay(1, CONTINUE_ON_FAILURE)
+
+828
+00:02:00,750 --> 00:02:00,750
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+829
+00:02:00,799 --> 00:02:00,800
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+830
+00:02:00,824 --> 00:02:00,825
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+831
+00:02:00,862 --> 00:02:00,863
+33. if (index == 100)
+
+832
+00:02:00,863 --> 00:02:00,863
+37. (index++)
+
+833
+00:02:00,864 --> 00:02:00,864
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+834
+00:02:00,883 --> 00:02:00,883
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+835
+00:02:00,907 --> 00:02:00,908
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+836
+00:02:00,982 --> 00:02:00,983
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+837
+00:02:01,030 --> 00:02:01,030
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+838
+00:02:01,286 --> 00:02:01,286
+17. delay(1, CONTINUE_ON_FAILURE)
+
+839
+00:02:02,289 --> 00:02:02,289
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+840
+00:02:02,327 --> 00:02:02,328
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+841
+00:02:02,366 --> 00:02:02,367
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+842
+00:02:02,400 --> 00:02:02,400
+33. if (index == 100)
+
+843
+00:02:02,400 --> 00:02:02,401
+37. (index++)
+
+844
+00:02:02,401 --> 00:02:02,401
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+845
+00:02:02,420 --> 00:02:02,420
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+846
+00:02:02,443 --> 00:02:02,444
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+847
+00:02:02,468 --> 00:02:02,470
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+848
+00:02:02,535 --> 00:02:02,536
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+849
+00:02:02,727 --> 00:02:02,727
+17. delay(1, CONTINUE_ON_FAILURE)
+
+850
+00:02:03,733 --> 00:02:03,733
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+851
+00:02:03,777 --> 00:02:03,777
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+852
+00:02:03,802 --> 00:02:03,802
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+853
+00:02:03,832 --> 00:02:03,833
+33. if (index == 100)
+
+854
+00:02:03,833 --> 00:02:03,833
+37. (index++)
+
+855
+00:02:03,833 --> 00:02:03,834
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+856
+00:02:03,851 --> 00:02:03,852
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+857
+00:02:03,872 --> 00:02:03,874
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+858
+00:02:03,912 --> 00:02:03,913
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+859
+00:02:03,971 --> 00:02:03,972
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+860
+00:02:04,139 --> 00:02:04,139
+17. delay(1, CONTINUE_ON_FAILURE)
+
+861
+00:02:05,144 --> 00:02:05,144
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+862
+00:02:05,186 --> 00:02:05,186
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+863
+00:02:05,211 --> 00:02:05,212
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+864
+00:02:05,243 --> 00:02:05,244
+33. if (index == 100)
+
+865
+00:02:05,245 --> 00:02:05,246
+37. (index++)
+
+866
+00:02:05,247 --> 00:02:05,248
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+867
+00:02:05,275 --> 00:02:05,276
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+868
+00:02:05,336 --> 00:02:05,337
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+869
+00:02:05,365 --> 00:02:05,365
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+870
+00:02:05,423 --> 00:02:05,424
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+871
+00:02:05,617 --> 00:02:05,617
+17. delay(1, CONTINUE_ON_FAILURE)
+
+872
+00:02:06,622 --> 00:02:06,623
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+873
+00:02:06,662 --> 00:02:06,662
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+874
+00:02:06,697 --> 00:02:06,697
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+875
+00:02:06,732 --> 00:02:06,733
+33. if (index == 100)
+
+876
+00:02:06,733 --> 00:02:06,734
+37. (index++)
+
+877
+00:02:06,734 --> 00:02:06,735
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+878
+00:02:06,762 --> 00:02:06,763
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+879
+00:02:06,790 --> 00:02:06,792
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+880
+00:02:06,830 --> 00:02:06,832
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+881
+00:02:06,889 --> 00:02:06,890
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+882
+00:02:07,082 --> 00:02:07,083
+17. delay(1, CONTINUE_ON_FAILURE)
+
+883
+00:02:08,085 --> 00:02:08,085
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+884
+00:02:08,125 --> 00:02:08,125
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+885
+00:02:08,150 --> 00:02:08,150
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+886
+00:02:08,184 --> 00:02:08,184
+33. if (index == 100)
+
+887
+00:02:08,184 --> 00:02:08,184
+37. (index++)
+
+888
+00:02:08,185 --> 00:02:08,185
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+889
+00:02:08,202 --> 00:02:08,203
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+890
+00:02:08,228 --> 00:02:08,229
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+891
+00:02:08,278 --> 00:02:08,279
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+892
+00:02:08,324 --> 00:02:08,324
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+893
+00:02:08,517 --> 00:02:08,518
+17. delay(1, CONTINUE_ON_FAILURE)
+
+894
+00:02:09,523 --> 00:02:09,524
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+895
+00:02:09,585 --> 00:02:09,586
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+896
+00:02:09,613 --> 00:02:09,613
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+897
+00:02:09,650 --> 00:02:09,651
+33. if (index == 100)
+
+898
+00:02:09,651 --> 00:02:09,651
+37. (index++)
+
+899
+00:02:09,651 --> 00:02:09,652
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+900
+00:02:09,671 --> 00:02:09,672
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+901
+00:02:09,704 --> 00:02:09,705
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+902
+00:02:09,748 --> 00:02:09,749
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+903
+00:02:09,805 --> 00:02:09,805
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+904
+00:02:10,096 --> 00:02:10,097
+17. delay(1, CONTINUE_ON_FAILURE)
+
+905
+00:02:11,102 --> 00:02:11,104
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+906
+00:02:11,156 --> 00:02:11,156
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+907
+00:02:11,183 --> 00:02:11,183
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+908
+00:02:11,218 --> 00:02:11,218
+33. if (index == 100)
+
+909
+00:02:11,219 --> 00:02:11,219
+37. (index++)
+
+910
+00:02:11,219 --> 00:02:11,219
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+911
+00:02:11,248 --> 00:02:11,249
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+912
+00:02:11,276 --> 00:02:11,277
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+913
+00:02:11,323 --> 00:02:11,323
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+914
+00:02:11,384 --> 00:02:11,384
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+915
+00:02:11,913 --> 00:02:11,913
+17. delay(1, CONTINUE_ON_FAILURE)
+
+916
+00:02:12,918 --> 00:02:12,919
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+917
+00:02:12,959 --> 00:02:12,960
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+918
+00:02:12,989 --> 00:02:12,990
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+919
+00:02:13,027 --> 00:02:13,027
+33. if (index == 100)
+
+920
+00:02:13,027 --> 00:02:13,028
+37. (index++)
+
+921
+00:02:13,028 --> 00:02:13,028
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+922
+00:02:13,048 --> 00:02:13,049
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+923
+00:02:13,072 --> 00:02:13,073
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+924
+00:02:13,109 --> 00:02:13,110
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+925
+00:02:13,162 --> 00:02:13,164
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+926
+00:02:13,364 --> 00:02:13,364
+17. delay(1, CONTINUE_ON_FAILURE)
+
+927
+00:02:14,369 --> 00:02:14,369
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+928
+00:02:14,418 --> 00:02:14,418
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+929
+00:02:14,449 --> 00:02:14,450
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+930
+00:02:14,500 --> 00:02:14,501
+33. if (index == 100)
+
+931
+00:02:14,501 --> 00:02:14,502
+37. (index++)
+
+932
+00:02:14,502 --> 00:02:14,503
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+933
+00:02:14,542 --> 00:02:14,543
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+934
+00:02:14,593 --> 00:02:14,593
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+935
+00:02:14,625 --> 00:02:14,626
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+936
+00:02:14,687 --> 00:02:14,687
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+937
+00:02:14,936 --> 00:02:14,937
+17. delay(1, CONTINUE_ON_FAILURE)
+
+938
+00:02:15,942 --> 00:02:15,943
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+939
+00:02:15,981 --> 00:02:15,981
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+940
+00:02:16,009 --> 00:02:16,009
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+941
+00:02:16,043 --> 00:02:16,043
+33. if (index == 100)
+
+942
+00:02:16,044 --> 00:02:16,044
+37. (index++)
+
+943
+00:02:16,044 --> 00:02:16,045
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+944
+00:02:16,062 --> 00:02:16,063
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+945
+00:02:16,082 --> 00:02:16,082
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+946
+00:02:16,126 --> 00:02:16,126
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+947
+00:02:16,174 --> 00:02:16,174
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+948
+00:02:16,348 --> 00:02:16,349
+17. delay(1, CONTINUE_ON_FAILURE)
+
+949
+00:02:17,354 --> 00:02:17,355
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+950
+00:02:17,394 --> 00:02:17,395
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+951
+00:02:17,419 --> 00:02:17,420
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+952
+00:02:17,451 --> 00:02:17,452
+33. if (index == 100)
+
+953
+00:02:17,452 --> 00:02:17,453
+37. (index++)
+
+954
+00:02:17,453 --> 00:02:17,454
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+955
+00:02:17,475 --> 00:02:17,475
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+956
+00:02:17,521 --> 00:02:17,522
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+957
+00:02:17,550 --> 00:02:17,551
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+958
+00:02:17,603 --> 00:02:17,604
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+959
+00:02:17,790 --> 00:02:17,790
+17. delay(1, CONTINUE_ON_FAILURE)
+
+960
+00:02:18,795 --> 00:02:18,796
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+961
+00:02:18,837 --> 00:02:18,838
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+962
+00:02:18,861 --> 00:02:18,861
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+963
+00:02:18,896 --> 00:02:18,897
+33. if (index == 100)
+
+964
+00:02:18,897 --> 00:02:18,897
+37. (index++)
+
+965
+00:02:18,898 --> 00:02:18,898
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+966
+00:02:18,916 --> 00:02:18,916
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+967
+00:02:18,950 --> 00:02:18,950
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+968
+00:02:18,981 --> 00:02:18,981
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+969
+00:02:19,028 --> 00:02:19,029
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+970
+00:02:19,262 --> 00:02:19,262
+17. delay(1, CONTINUE_ON_FAILURE)
+
+971
+00:02:20,269 --> 00:02:20,269
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+972
+00:02:20,322 --> 00:02:20,323
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+973
+00:02:20,346 --> 00:02:20,347
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+974
+00:02:20,379 --> 00:02:20,380
+33. if (index == 100)
+
+975
+00:02:20,380 --> 00:02:20,380
+37. (index++)
+
+976
+00:02:20,380 --> 00:02:20,381
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+977
+00:02:20,400 --> 00:02:20,400
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+978
+00:02:20,421 --> 00:02:20,421
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+979
+00:02:20,477 --> 00:02:20,477
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+980
+00:02:20,531 --> 00:02:20,532
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+981
+00:02:20,749 --> 00:02:20,749
+17. delay(1, CONTINUE_ON_FAILURE)
+
+982
+00:02:21,755 --> 00:02:21,755
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+983
+00:02:21,819 --> 00:02:21,819
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+984
+00:02:21,854 --> 00:02:21,855
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+985
+00:02:21,897 --> 00:02:21,897
+33. if (index == 100)
+
+986
+00:02:21,897 --> 00:02:21,898
+37. (index++)
+
+987
+00:02:21,899 --> 00:02:21,900
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+988
+00:02:21,923 --> 00:02:21,924
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+989
+00:02:21,960 --> 00:02:21,961
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+990
+00:02:21,997 --> 00:02:21,998
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+991
+00:02:22,043 --> 00:02:22,043
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+992
+00:02:22,216 --> 00:02:22,217
+17. delay(1, CONTINUE_ON_FAILURE)
+
+993
+00:02:23,222 --> 00:02:23,223
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+994
+00:02:23,267 --> 00:02:23,267
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+995
+00:02:23,302 --> 00:02:23,302
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+996
+00:02:23,335 --> 00:02:23,335
+33. if (index == 100)
+
+997
+00:02:23,335 --> 00:02:23,336
+37. (index++)
+
+998
+00:02:23,336 --> 00:02:23,336
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+999
+00:02:23,356 --> 00:02:23,356
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+1000
+00:02:23,379 --> 00:02:23,379
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+1001
+00:02:23,419 --> 00:02:23,420
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1002
+00:02:23,492 --> 00:02:23,493
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1003
+00:02:23,651 --> 00:02:23,651
+17. delay(1, CONTINUE_ON_FAILURE)
+
+1004
+00:02:24,656 --> 00:02:24,657
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+1005
+00:02:24,701 --> 00:02:24,703
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+1006
+00:02:24,734 --> 00:02:24,735
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+1007
+00:02:24,777 --> 00:02:24,777
+33. if (index == 100)
+
+1008
+00:02:24,778 --> 00:02:24,778
+37. (index++)
+
+1009
+00:02:24,778 --> 00:02:24,779
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+1010
+00:02:24,798 --> 00:02:24,798
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+1011
+00:02:24,824 --> 00:02:24,824
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+1012
+00:02:24,897 --> 00:02:24,898
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1013
+00:02:24,941 --> 00:02:24,941
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1014
+00:02:25,107 --> 00:02:25,108
+17. delay(1, CONTINUE_ON_FAILURE)
+
+1015
+00:02:26,113 --> 00:02:26,114
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+1016
+00:02:26,157 --> 00:02:26,159
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+1017
+00:02:26,191 --> 00:02:26,192
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+1018
+00:02:26,222 --> 00:02:26,222
+33. if (index == 100)
+
+1019
+00:02:26,222 --> 00:02:26,223
+37. (index++)
+
+1020
+00:02:26,224 --> 00:02:26,225
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+1021
+00:02:26,245 --> 00:02:26,246
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+1022
+00:02:26,272 --> 00:02:26,273
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+1023
+00:02:26,333 --> 00:02:26,333
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1024
+00:02:26,396 --> 00:02:26,396
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1025
+00:02:26,622 --> 00:02:26,623
+17. delay(1, CONTINUE_ON_FAILURE)
+
+1026
+00:02:27,627 --> 00:02:27,627
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+1027
+00:02:27,673 --> 00:02:27,673
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+1028
+00:02:27,696 --> 00:02:27,697
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+1029
+00:02:27,735 --> 00:02:27,736
+33. if (index == 100)
+
+1030
+00:02:27,736 --> 00:02:27,737
+37. (index++)
+
+1031
+00:02:27,737 --> 00:02:27,738
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+1032
+00:02:27,761 --> 00:02:27,762
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+1033
+00:02:27,792 --> 00:02:27,792
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+1034
+00:02:27,839 --> 00:02:27,840
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1035
+00:02:27,895 --> 00:02:27,895
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1036
+00:02:28,088 --> 00:02:28,088
+17. delay(1, CONTINUE_ON_FAILURE)
+
+1037
+00:02:29,094 --> 00:02:29,095
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+1038
+00:02:29,139 --> 00:02:29,140
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+1039
+00:02:29,164 --> 00:02:29,165
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+1040
+00:02:29,199 --> 00:02:29,199
+33. if (index == 100)
+
+1041
+00:02:29,199 --> 00:02:29,200
+37. (index++)
+
+1042
+00:02:29,200 --> 00:02:29,200
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+1043
+00:02:29,221 --> 00:02:29,221
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+1044
+00:02:29,249 --> 00:02:29,251
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+1045
+00:02:29,289 --> 00:02:29,290
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1046
+00:02:29,341 --> 00:02:29,342
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1047
+00:02:29,520 --> 00:02:29,521
+17. delay(1, CONTINUE_ON_FAILURE)
+
+1048
+00:02:30,526 --> 00:02:30,527
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+1049
+00:02:30,574 --> 00:02:30,574
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+1050
+00:02:30,600 --> 00:02:30,600
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+1051
+00:02:30,643 --> 00:02:30,643
+33. if (index == 100)
+
+1052
+00:02:30,643 --> 00:02:30,644
+37. (index++)
+
+1053
+00:02:30,644 --> 00:02:30,645
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+1054
+00:02:30,664 --> 00:02:30,664
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+1055
+00:02:30,687 --> 00:02:30,688
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+1056
+00:02:30,718 --> 00:02:30,719
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1057
+00:02:30,820 --> 00:02:30,821
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1058
+00:02:31,035 --> 00:02:31,037
+17. delay(1, CONTINUE_ON_FAILURE)
+
+1059
+00:02:32,044 --> 00:02:32,044
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+1060
+00:02:32,081 --> 00:02:32,081
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+1061
+00:02:32,102 --> 00:02:32,102
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+1062
+00:02:32,136 --> 00:02:32,137
+33. if (index == 100)
+
+1063
+00:02:32,137 --> 00:02:32,138
+37. (index++)
+
+1064
+00:02:32,139 --> 00:02:32,140
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+1065
+00:02:32,170 --> 00:02:32,171
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+1066
+00:02:32,200 --> 00:02:32,200
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+1067
+00:02:32,235 --> 00:02:32,236
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1068
+00:02:32,289 --> 00:02:32,289
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1069
+00:02:32,466 --> 00:02:32,466
+17. delay(1, CONTINUE_ON_FAILURE)
+
+1070
+00:02:33,471 --> 00:02:33,471
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+1071
+00:02:33,511 --> 00:02:33,512
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+1072
+00:02:33,536 --> 00:02:33,537
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+1073
+00:02:33,588 --> 00:02:33,588
+33. if (index == 100)
+
+1074
+00:02:33,589 --> 00:02:33,589
+37. (index++)
+
+1075
+00:02:33,590 --> 00:02:33,590
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+1076
+00:02:33,608 --> 00:02:33,609
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+1077
+00:02:33,630 --> 00:02:33,630
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+1078
+00:02:33,665 --> 00:02:33,668
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1079
+00:02:33,712 --> 00:02:33,712
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1080
+00:02:33,916 --> 00:02:33,917
+17. delay(1, CONTINUE_ON_FAILURE)
+
+1081
+00:02:34,922 --> 00:02:34,923
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+1082
+00:02:34,977 --> 00:02:34,978
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+1083
+00:02:35,001 --> 00:02:35,001
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+1084
+00:02:35,033 --> 00:02:35,033
+33. if (index == 100)
+
+1085
+00:02:35,033 --> 00:02:35,033
+37. (index++)
+
+1086
+00:02:35,034 --> 00:02:35,034
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+1087
+00:02:35,052 --> 00:02:35,053
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+1088
+00:02:35,074 --> 00:02:35,075
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+1089
+00:02:35,124 --> 00:02:35,124
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1090
+00:02:35,175 --> 00:02:35,176
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1091
+00:02:35,321 --> 00:02:35,321
+17. delay(1, CONTINUE_ON_FAILURE)
+
+1092
+00:02:36,326 --> 00:02:36,327
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+1093
+00:02:36,365 --> 00:02:36,366
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+1094
+00:02:36,389 --> 00:02:36,390
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+1095
+00:02:36,437 --> 00:02:36,438
+33. if (index == 100)
+
+1096
+00:02:36,438 --> 00:02:36,438
+37. (index++)
+
+1097
+00:02:36,439 --> 00:02:36,440
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+1098
+00:02:36,477 --> 00:02:36,477
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+1099
+00:02:36,504 --> 00:02:36,504
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+1100
+00:02:36,538 --> 00:02:36,539
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1101
+00:02:36,596 --> 00:02:36,597
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1102
+00:02:36,817 --> 00:02:36,817
+17. delay(1, CONTINUE_ON_FAILURE)
+
+1103
+00:02:37,822 --> 00:02:37,822
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+1104
+00:02:37,885 --> 00:02:37,886
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+1105
+00:02:37,908 --> 00:02:37,908
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+1106
+00:02:37,948 --> 00:02:37,949
+33. if (index == 100)
+
+1107
+00:02:37,949 --> 00:02:37,950
+37. (index++)
+
+1108
+00:02:37,950 --> 00:02:37,951
+41. contentSize = xpath("(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])")).size()
+
+1109
+00:02:37,969 --> 00:02:37,969
+1. element = findWebElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 30)
+
+1110
+00:02:37,995 --> 00:02:37,996
+5. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), 10, CONTINUE_ON_FAILURE)
+
+1111
+00:02:38,035 --> 00:02:38,037
+9. contentLinkText = getText(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1112
+00:02:38,093 --> 00:02:38,093
+13. click(findTestObject("Page_Writing Tests  Apex Developer/ContentLinks", ["x":index]), CONTINUE_ON_FAILURE)
+
+1113
+00:02:38,274 --> 00:02:38,275
+17. delay(1, CONTINUE_ON_FAILURE)
+
+1114
+00:02:39,277 --> 00:02:39,278
+21. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+1115
+00:02:39,317 --> 00:02:39,317
+25. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+1116
+00:02:39,340 --> 00:02:39,341
+29. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), contentLinkText, CONTINUE_ON_FAILURE)
+
+1117
+00:02:39,375 --> 00:02:39,375
+33. if (index == 100)
+
+1118
+00:02:39,375 --> 00:02:39,375
+1. break
+
+1119
+00:02:39,376 --> 00:02:39,376
+73. closeBrowser()
+

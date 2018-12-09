@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Search for Writing Tests</description>
+   <name>TC-002</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b2db73c3-7511-4c52-9922-5bdc2933754b</testCaseGuid>
+</TestCaseEntity>

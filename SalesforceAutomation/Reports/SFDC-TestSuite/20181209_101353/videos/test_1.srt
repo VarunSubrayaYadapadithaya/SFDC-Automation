@@ -1,0 +1,28 @@
+1
+00:00:00,941 --> 00:00:00,953
+1. openBrowser("")
+
+2
+00:00:04,829 --> 00:00:04,833
+5. maximizeWindow()
+
+3
+00:00:05,137 --> 00:00:05,139
+9. navigateToUrl("https://developer.salesforce.com/")
+
+4
+00:00:10,669 --> 00:00:10,671
+13. PageTitle = getWindowTitle()
+
+5
+00:00:10,717 --> 00:00:10,719
+17. verifyMatch(PageTitle, "Salesforce Developers | API Documentation, Developer Forums & More", false)
+
+6
+00:00:10,751 --> 00:00:10,755
+21. delay(2)
+
+7
+00:00:12,771 --> 00:00:12,779
+25. closeBrowser()
+

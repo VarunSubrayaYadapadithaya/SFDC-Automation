@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>On the Writing Tests Page, Click Link Testing Apex
+Verify Testing Apex page is loaded.
+Logout</description>
+   <name>TC-003</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>83f75378-2f1a-4d4f-8409-ccbfbc466845</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,58 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+SFDC-TestSuite,Chrome 70.0.3538.110,,2018-12-09 09:54:20,2018-12-09 10:06:24,12m - 4.166s,PASSED
+,,,,,,
+Test Cases/TC-001,Chrome 70.0.3538.110,Login to developer.salesforce.com,2018-12-09 09:54:20,2018-12-09 09:54:36,16.179s,PASSED
+"openBrowser("""")",Chrome 70.0.3538.110,,2018-12-09 09:54:22,2018-12-09 09:54:26,4.650s,PASSED
+maximizeWindow(),Chrome 70.0.3538.110,,2018-12-09 09:54:26,2018-12-09 09:54:27,0.287s,PASSED
+"navigateToUrl(""https://developer.salesforce.com/"")",Chrome 70.0.3538.110,,2018-12-09 09:54:27,2018-12-09 09:54:32,5.478s,PASSED
+PageTitle = getWindowTitle(),Chrome 70.0.3538.110,,2018-12-09 09:54:32,2018-12-09 09:54:32,0.063s,PASSED
+"verifyMatch(PageTitle, ""Salesforce Developers | API Documentation, Developer Forums & More"", false)",Chrome 70.0.3538.110,,2018-12-09 09:54:32,2018-12-09 09:54:32,0.051s,PASSED
+delay(2),Chrome 70.0.3538.110,,2018-12-09 09:54:32,2018-12-09 09:54:34,2.015s,PASSED
+closeBrowser(),Chrome 70.0.3538.110,,2018-12-09 09:54:34,2018-12-09 09:54:34,0.004s,NOT_RUN
+,,,,,,
+Test Cases/TC-002,Chrome 70.0.3538.110,Search for Writing Tests,2018-12-09 09:54:36,2018-12-09 10:05:27,10m - 50.320s,PASSED
+"openBrowser("""")",Chrome 70.0.3538.110,,2018-12-09 09:54:37,2018-12-09 09:54:37,0.006s,NOT_RUN
+maximizeWindow(),Chrome 70.0.3538.110,,2018-12-09 09:54:37,2018-12-09 09:54:37,0.005s,NOT_RUN
+"navigateToUrl(""developer.salesforce.com"")",Chrome 70.0.3538.110,,2018-12-09 09:54:37,2018-12-09 09:54:37,0.004s,NOT_RUN
+PageTitle = getWindowTitle(),Chrome 70.0.3538.110,,2018-12-09 09:54:37,2018-12-09 09:54:37,0.002s,NOT_RUN
+"verifyMatch(PageTitle, ""Salesforce Developers | API Documentation, Developer Forums & More"", false)",Chrome 70.0.3538.110,,2018-12-09 09:54:37,2018-12-09 09:54:37,0.003s,NOT_RUN
+"if (verifyElementPresent(findTestObject(""Page_Salesforce Developers  API Doc/GDPR_Div_CloseButton""), 60, OPTIONAL))",Chrome 70.0.3538.110,,2018-12-09 09:54:37,2018-12-09 09:54:37,0.307s,PASSED
+"waitForElementVisible(findTestObject(""Page_Salesforce Developers  API Doc/Search_TextBox""), 60)",Chrome 70.0.3538.110,,2018-12-09 09:54:37,2018-12-09 09:54:38,0.120s,PASSED
+"setText(findTestObject(""Page_Salesforce Developers  API Doc/Search_TextBox""), ""Writing Tests"")",Chrome 70.0.3538.110,,2018-12-09 09:54:38,2018-12-09 09:54:38,0.483s,PASSED
+"sendKeys(findTestObject(""Page_Salesforce Developers  API Doc/Search_TextBox""), Keys.chord(ENTER))",Chrome 70.0.3538.110,,2018-12-09 09:54:38,2018-12-09 09:54:42,3.932s,PASSED
+"waitForPageLoad(30, STOP_ON_FAILURE)",Chrome 70.0.3538.110,,2018-12-09 09:54:42,2018-12-09 09:54:42,0.144s,PASSED
+"verifyElementPresent(findTestObject(""Page_Search/a_Writing Tests  Apex Develope""), 30)",Chrome 70.0.3538.110,,2018-12-09 09:54:42,2018-12-09 09:54:42,0.070s,PASSED
+"waitForElementClickable(findTestObject(""Page_Search/a_Writing Tests  Apex Develope""), 20)",Chrome 70.0.3538.110,,2018-12-09 09:54:42,2018-12-09 09:54:42,0.355s,PASSED
+"click(findTestObject(""Page_Search/a_Writing Tests  Apex Develope""), STOP_ON_FAILURE)",Chrome 70.0.3538.110,,2018-12-09 09:54:42,2018-12-09 09:54:43,0.152s,PASSED
+driver = getWebDriver(),Chrome 70.0.3538.110,,2018-12-09 09:54:43,2018-12-09 09:54:43,0.013s,PASSED
+delay(5),Chrome 70.0.3538.110,,2018-12-09 09:54:43,2018-12-09 09:54:48,5.008s,PASSED
+"contentSize = xpath(""(//div[@class='toc-container']/following::span[contains(@class,'ng-binding ng-scope')])"")).size()",Chrome 70.0.3538.110,,2018-12-09 09:54:48,2018-12-09 09:54:48,0.072s,PASSED
+index = 1,Chrome 70.0.3538.110,,2018-12-09 09:54:48,2018-12-09 09:54:48,0.002s,PASSED
+while (contentSize != index),Chrome 70.0.3538.110,,2018-12-09 09:54:48,2018-12-09 10:05:25,10m - 36.833s,PASSED
+closeBrowser(),Chrome 70.0.3538.110,,2018-12-09 10:05:25,2018-12-09 10:05:25,0.001s,NOT_RUN
+,,,,,,
+Test Cases/TC-003,Chrome 70.0.3538.110,"On the Writing Tests Page, Click Link Testing Apex
+Verify Testing Apex page is loaded.
+Logout",2018-12-09 10:05:27,2018-12-09 10:06:24,57.231s,PASSED
+"openBrowser("""")",Chrome 70.0.3538.110,,2018-12-09 10:05:27,2018-12-09 10:05:27,0.001s,NOT_RUN
+maximizeWindow(),Chrome 70.0.3538.110,,2018-12-09 10:05:27,2018-12-09 10:05:27,0.001s,NOT_RUN
+"navigateToUrl(""developer.salesforce.com"")",Chrome 70.0.3538.110,,2018-12-09 10:05:27,2018-12-09 10:05:27,0.001s,NOT_RUN
+PageTitle = getWindowTitle(),Chrome 70.0.3538.110,,2018-12-09 10:05:27,2018-12-09 10:05:27,0.001s,NOT_RUN
+"verifyMatch(PageTitle, ""Salesforce Developers | API Documentation, Developer Forums & More"", false)",Chrome 70.0.3538.110,,2018-12-09 10:05:27,2018-12-09 10:05:27,0.001s,NOT_RUN
+"if (verifyElementPresent(findTestObject(""Page_Salesforce Developers  API Doc/GDPR_Div_CloseButton""), 60, OPTIONAL))",Chrome 70.0.3538.110,,2018-12-09 10:05:27,2018-12-09 10:05:27,0.001s,NOT_RUN
+"waitForElementVisible(findTestObject(""Page_Salesforce Developers  API Doc/Search_TextBox""), 60)",Chrome 70.0.3538.110,,2018-12-09 10:05:27,2018-12-09 10:05:27,0.056s,PASSED
+"scrollToElement(findTestObject(""Page_Salesforce Developers  API Doc/Search_TextBox""), 60)",Chrome 70.0.3538.110,,2018-12-09 10:05:27,2018-12-09 10:05:27,0.027s,PASSED
+"setText(findTestObject(""Page_Salesforce Developers  API Doc/Search_TextBox""), ""Writing Tests"")",Chrome 70.0.3538.110,,2018-12-09 10:05:27,2018-12-09 10:05:28,0.336s,PASSED
+"sendKeys(findTestObject(""Page_Salesforce Developers  API Doc/Search_TextBox""), Keys.chord(ENTER))",Chrome 70.0.3538.110,,2018-12-09 10:05:28,2018-12-09 10:05:58,30.288s,PASSED
+"waitForPageLoad(30, STOP_ON_FAILURE)",Chrome 70.0.3538.110,,2018-12-09 10:05:58,2018-12-09 10:05:58,0.017s,PASSED
+"verifyElementPresent(findTestObject(""Page_Search/a_Writing Tests  Apex Develope""), 30)",Chrome 70.0.3538.110,,2018-12-09 10:05:58,2018-12-09 10:05:58,0.029s,PASSED
+"waitForElementClickable(findTestObject(""Page_Search/a_Writing Tests  Apex Develope""), 20)",Chrome 70.0.3538.110,,2018-12-09 10:05:58,2018-12-09 10:05:58,0.035s,PASSED
+"click(findTestObject(""Page_Search/a_Writing Tests  Apex Develope""), STOP_ON_FAILURE)",Chrome 70.0.3538.110,,2018-12-09 10:05:58,2018-12-09 10:05:58,0.103s,PASSED
+delay(3),Chrome 70.0.3538.110,,2018-12-09 10:05:58,2018-12-09 10:06:01,3.006s,PASSED
+"scrollToElement(findTestObject(""Page_Writing Tests  Apex Developer/a_Testing Apex""), 15)",Chrome 70.0.3538.110,,2018-12-09 10:06:01,2018-12-09 10:06:20,19.144s,PASSED
+"click(findTestObject(""Page_Writing Tests  Apex Developer/a_Testing Apex""), STOP_ON_FAILURE)",Chrome 70.0.3538.110,,2018-12-09 10:06:20,2018-12-09 10:06:20,0.304s,PASSED
+delay(1),Chrome 70.0.3538.110,,2018-12-09 10:06:20,2018-12-09 10:06:21,1.005s,PASSED
+"header = getText(findTestObject(""Page_Writing Tests  Apex Developer/h1_ContentHeader""), CONTINUE_ON_FAILURE)",Chrome 70.0.3538.110,,2018-12-09 10:06:21,2018-12-09 10:06:22,0.058s,PASSED
+"scrollToElement(findTestObject(""Page_Writing Tests  Apex Developer/h1_ContentHeader""), 10, CONTINUE_ON_FAILURE)",Chrome 70.0.3538.110,,2018-12-09 10:06:22,2018-12-09 10:06:22,0.030s,PASSED
+"verifyElementText(findTestObject(""Page_Writing Tests  Apex Developer/h1_ContentHeader""), ""Testing Apex"", CONTINUE_ON_FAILURE)",Chrome 70.0.3538.110,,2018-12-09 10:06:22,2018-12-09 10:06:22,0.037s,PASSED
+closeBrowser(),Chrome 70.0.3538.110,,2018-12-09 10:06:22,2018-12-09 10:06:22,0.322s,PASSED

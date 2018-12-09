@@ -1,0 +1,88 @@
+1
+00:00:00,298 --> 00:00:00,299
+1. openBrowser("")
+
+2
+00:00:00,300 --> 00:00:00,301
+5. maximizeWindow()
+
+3
+00:00:00,302 --> 00:00:00,302
+9. navigateToUrl("developer.salesforce.com")
+
+4
+00:00:00,303 --> 00:00:00,303
+13. PageTitle = getWindowTitle()
+
+5
+00:00:00,304 --> 00:00:00,304
+17. verifyMatch(PageTitle, "Salesforce Developers | API Documentation, Developer Forums & More", false)
+
+6
+00:00:00,305 --> 00:00:00,305
+21. if (verifyElementPresent(findTestObject("Page_Salesforce Developers  API Doc/GDPR_Div_CloseButton"), 60, OPTIONAL))
+
+7
+00:00:00,305 --> 00:00:00,306
+25. waitForElementVisible(findTestObject("Page_Salesforce Developers  API Doc/Search_TextBox"), 60)
+
+8
+00:00:00,361 --> 00:00:00,363
+29. scrollToElement(findTestObject("Page_Salesforce Developers  API Doc/Search_TextBox"), 60)
+
+9
+00:00:00,389 --> 00:00:00,391
+33. setText(findTestObject("Page_Salesforce Developers  API Doc/Search_TextBox"), "Writing Tests")
+
+10
+00:00:00,726 --> 00:00:00,727
+37. sendKeys(findTestObject("Page_Salesforce Developers  API Doc/Search_TextBox"), Keys.chord(ENTER))
+
+11
+00:00:31,014 --> 00:00:31,015
+41. waitForPageLoad(30, STOP_ON_FAILURE)
+
+12
+00:00:31,031 --> 00:00:31,033
+45. verifyElementPresent(findTestObject("Page_Search/a_Writing Tests  Apex Develope"), 30)
+
+13
+00:00:31,061 --> 00:00:31,061
+49. waitForElementClickable(findTestObject("Page_Search/a_Writing Tests  Apex Develope"), 20)
+
+14
+00:00:31,096 --> 00:00:31,096
+53. click(findTestObject("Page_Search/a_Writing Tests  Apex Develope"), STOP_ON_FAILURE)
+
+15
+00:00:31,198 --> 00:00:31,199
+57. delay(3)
+
+16
+00:00:34,204 --> 00:00:34,205
+61. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/a_Testing Apex"), 15)
+
+17
+00:00:53,349 --> 00:00:53,350
+65. click(findTestObject("Page_Writing Tests  Apex Developer/a_Testing Apex"), STOP_ON_FAILURE)
+
+18
+00:00:53,652 --> 00:00:53,653
+69. delay(1)
+
+19
+00:00:54,658 --> 00:00:54,658
+73. header = getText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), CONTINUE_ON_FAILURE)
+
+20
+00:00:54,716 --> 00:00:54,717
+77. scrollToElement(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), 10, CONTINUE_ON_FAILURE)
+
+21
+00:00:54,747 --> 00:00:54,747
+81. verifyElementText(findTestObject("Page_Writing Tests  Apex Developer/h1_ContentHeader"), "Testing Apex", CONTINUE_ON_FAILURE)
+
+22
+00:00:54,783 --> 00:00:54,790
+85. closeBrowser()
+
